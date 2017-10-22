@@ -1,0 +1,44 @@
+.SubmitButton {
+    background: none;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.SubmitButton:hover {
+    background: #ddd;
+}
+
+.Symbol {
+    width: 30px;
+}
+
+.Checkbox {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Checkbox:checked {
+    background-image: url('Check.svg');
+    background-size: 30px;
+}
+
+.Input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 4px;
+    flex-grow: 1;
+}
