@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import App from './App';
 
 it('Renders without crashing', () => {
-  const component = renderer.create(
+  const component = shallow(
     <App />
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(component)).toMatchSnapshot();
 });

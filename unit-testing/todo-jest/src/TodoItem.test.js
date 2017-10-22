@@ -1,33 +1,31 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import TodoItem from './TodoItem';
 
 it('Renders empty children without crashing', () => {
   const noop = () => {};
 
-  const component = renderer.create(
+  const component = shallow(
     <TodoItem id={1} completed={false} onChange={noop}></TodoItem>
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(component)).toMatchSnapshot();
 });
 
 it('Displays item content passed as child string', () => {
   const noop = () => {};
 
-  const component = renderer.create(
+  const component = shallow(
     <TodoItem id={1} completed={false} onChange={noop}>Task 1</TodoItem>
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(component)).toMatchSnapshot();
 });
 
 it('Displays checked status when passed completed boolean', () => {
   const noop = () => {};
 
-  const component = renderer.create(
+  const component = shallow(
     <TodoItem id={1} completed={false} onChange={noop}>Task 1</TodoItem>
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(component)).toMatchSnapshot();
 });

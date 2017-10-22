@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import TodoList from './TodoList';
 
 it('Renders initial state without crashing', () => {
-  const component = renderer.create(
+  const component = shallow(
     <TodoList />
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(component)).toMatchSnapshot();
 });

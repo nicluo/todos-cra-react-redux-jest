@@ -4,52 +4,7 @@ exports[`Renders without crashing 1`] = `
 <div
   className="App"
 >
-  <header
-    className="Header bg-black-90 w-100 ph3 pv3 pv4-ns ph4-m ph5-l tc"
-  >
-    <nav
-      className="f6 fw6 ttu tracked"
-    >
-      <a
-        className="link dim white dib mh3"
-        href="/"
-        title="Todo"
-      >
-        Todo
-      </a>
-    </nav>
-  </header>
-  <div
-    className="TodoList ph3 mv4"
-  >
-    <div
-      className="TodoForm center mw-100 mw8-ns ba bw1 b--black-40 br2 mv3"
-    >
-      <form
-        onSubmit={[Function]}
-      >
-        <div
-          className="flex items-center pa3 f4 f4-ns lh-copy"
-        >
-          <button
-            className="SubmitButton f3 dt"
-            type="submit"
-          >
-            <div
-              className="Symbol dtc"
-            >
-              +
-            </div>
-          </button>
-          <input
-            className="Input mw-100"
-            onChange={[Function]}
-            type="text"
-            value=""
-          />
-        </div>
-      </form>
-    </div>
-  </div>
+  <Header />
+  <TodoList />
 </div>
 `;
