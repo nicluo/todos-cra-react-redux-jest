@@ -24,7 +24,7 @@ class TodoItem extends Component {
 TodoItem.propTypes = {
   id: PropTypes.number.isRequired,
   completed: PropTypes.bool.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
   onChange: PropTypes.func.isRequired
 };
 
