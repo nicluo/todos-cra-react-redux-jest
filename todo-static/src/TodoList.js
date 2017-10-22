@@ -2,20 +2,13 @@ import React, { Component } from 'react';
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
 
-const TODOS = [
-  {title: "Start With A Mock", completed: true},
-  {title: "Step 1: Break The UI Into A Component Hierarchy", completed: true},
-  {title: "Step 2: Build A Static Version in React", completed: true},
-  {title: "Step 3: Identify The Minimal (but complete) Representation Of UI State", completed: false},
-];
-
-const INPUT = "New Todo Item";
+const DEFAULT_STATE = {
+  todos: [],
+  input: ""
+};
 
 class TodoList extends Component {
-  state = {
-    todos: TODOS,
-    input: INPUT
-  };
+  state = DEFAULT_STATE;
 
   handleInputChange = (event) => {
     this.setState({input: event.target.value});
