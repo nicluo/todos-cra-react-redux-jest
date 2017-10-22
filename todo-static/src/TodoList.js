@@ -9,21 +9,19 @@ const TODOS = [
   {title: "Step 3: Identify The Minimal (but complete) Representation Of UI State", completed: false},
 ];
 
-const TODOFORM = {
-  input: "New Todo Item"
-};
+const INPUT = "New Todo Item";
 
 class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       todos: TODOS,
-      todoForm: TODOFORM
+      input: INPUT
     };
   }
 
   render() {
-    const {todos, todoForm} = this.state;
+    const {todos, input} = this.state;
 
     const todoListContent = todos.map(function(todo) {
       return (<TodoItem completed={todo.completed}>{todo.title}</TodoItem>);
@@ -32,7 +30,7 @@ class TodoList extends Component {
     return (
       <div className="TodoList ph3 mv4">
         {todoListContent}
-        <TodoForm {...todoForm} />
+        <TodoForm input={input} />
       </div>
     );
   }
