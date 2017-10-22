@@ -17,7 +17,13 @@ class TodoList extends Component {
   handleSubmit = (event) => {
     this.setState((prevState) => {
       const newTodos = prevState.todos.slice();
-      newTodos.push({title: prevState.input, completed: false});
+      const todo = {
+        // TODO: Generate better unique ids rather than using Math.random()
+        id: Math.floor(Math.random() * 1000),
+        title: prevState.input,
+        completed: false
+      };
+      newTodos.push(todo);
       return {todos: newTodos, input: ''};
     });
     event.preventDefault();
@@ -26,8 +32,8 @@ class TodoList extends Component {
   render() {
     const {todos, input} = this.state;
 
-    const todoListContent = todos.map(function(todo) {
-      return (<TodoItem completed={todo.completed}>{todo.title}</TodoItem>);
+    const todoListContent = todos.map((todo) => {
+      return (<TodoItem key={todo.id} id={todo.id} completed={todo.completed}>{todo.title}</TodoItem>);
     });
 
     return (
