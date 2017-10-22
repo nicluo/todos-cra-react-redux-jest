@@ -23,8 +23,5 @@
       "!src/index.js",
       "!src/registerServiceWorker.js"
     ]
-  },
-  "resolutions": {
-    "just-extend": "1.1.22"
   }
 }
