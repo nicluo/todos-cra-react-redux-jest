@@ -12,13 +12,23 @@ const TODOS = [
 const INPUT = "New Todo Item";
 
 class TodoList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: TODOS,
-      input: INPUT
-    };
-  }
+  state = {
+    todos: TODOS,
+    input: INPUT
+  };
+
+  handleInputChange = (event) => {
+    this.setState({input: event.target.value});
+  };
+
+  handleSubmit = (event) => {
+    this.setState((prevState) => {
+      const newTodos = prevState.todos.slice();
+      newTodos.push({title: prevState.input, completed: false});
+      return {todos: newTodos, input: ''};
+    });
+    event.preventDefault();
+  };
 
   render() {
     const {todos, input} = this.state;
@@ -30,7 +40,7 @@ class TodoList extends Component {
     return (
       <div className="TodoList ph3 mv4">
         {todoListContent}
-        <TodoForm input={input} />
+        <TodoForm onChange={this.handleInputChange} onSubmit={this.handleSubmit} input={input} />
       </div>
     );
   }
