@@ -21,7 +21,7 @@ class TodoForm extends Component {
 }
 
 TodoForm.propTypes = {
-  input: PropTypes.bool.isRequired,
+  input: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired
 };
