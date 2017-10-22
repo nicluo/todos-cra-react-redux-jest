@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input value changes with props provided 1`] = `
+<div
+  className="TodoForm center mw-100 mw8-ns ba bw1 b--black-40 br2 mv3"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="flex items-center pa3 f4 f4-ns lh-copy"
+    >
+      <button
+        className="SubmitButton f3 dt"
+        type="submit"
+      >
+        <div
+          className="Symbol dtc"
+        >
+          +
+        </div>
+      </button>
+      <input
+        className="Input mw-100"
+        onChange={[Function]}
+        type="text"
+        value="test input"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Renders without crashing 1`] = `
+<div
+  className="TodoForm center mw-100 mw8-ns ba bw1 b--black-40 br2 mv3"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="flex items-center pa3 f4 f4-ns lh-copy"
+    >
+      <button
+        className="SubmitButton f3 dt"
+        type="submit"
+      >
+        <div
+          className="Symbol dtc"
+        >
+          +
+        </div>
+      </button>
+      <input
+        className="Input mw-100"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;
