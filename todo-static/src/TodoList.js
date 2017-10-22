@@ -29,11 +29,23 @@ class TodoList extends Component {
     event.preventDefault();
   };
 
+  handleTodoChange = (id, completed) => {
+    this.setState((prevState) => {
+      const newTodos = this.state.todos.map((todo) => {
+        if (todo.id === id) {
+          todo.completed = completed
+        }
+        return todo;
+      });
+      return {todos: newTodos};
+    });
+  };
+
   render() {
     const {todos, input} = this.state;
 
     const todoListContent = todos.map((todo) => {
-      return (<TodoItem key={todo.id} id={todo.id} completed={todo.completed}>{todo.title}</TodoItem>);
+      return (<TodoItem key={todo.id} id={todo.id} completed={todo.completed} onChange={this.handleTodoChange}>{todo.title}</TodoItem>);
     });
 
     return (
