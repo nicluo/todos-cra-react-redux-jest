@@ -14,13 +14,25 @@ const TODOFORM = {
 };
 
 class TodoList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: TODOS,
+      todoForm: TODOFORM
+    };
+  }
+
   render() {
+    const {todos, todoForm} = this.state;
+
+    const todoListContent = todos.map(function(todo) {
+      return (<TodoItem completed={todo.completed}>{todo.title}</TodoItem>);
+    });
+
     return (
       <div className="TodoList ph3 mv4">
-        {TODOS.map(function(todo){
-          return (<TodoItem completed={todo.completed}>{todo.title}</TodoItem>);
-        })}
-        <TodoForm input={TODOFORM.input} />
+        {todoListContent}
+        <TodoForm {...todoForm} />
       </div>
     );
   }
