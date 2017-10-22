@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <header className="Header bg-black-90 w-100 ph3 pv3 pv4-ns ph4-m ph5-l tc">
         <nav className="f6 fw6 ttu tracked">
-          <NavLink />
+          <NavLink to="/">Todo</NavLink>
         </nav>
       </header>
     )
