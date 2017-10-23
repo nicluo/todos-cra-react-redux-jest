@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders another link correctly 1`] = `
+<a
+  className="link dim white dib mh3"
+  href="/archive"
+  title="Archive"
+>
+  Archive
+</a>
+`;
+
+exports[`Renders brand link correctly 1`] = `
+<a
+  className="link dim white dib mh3"
+  href="/"
+  title="Todo"
+>
+  Todo
+</a>
+`;

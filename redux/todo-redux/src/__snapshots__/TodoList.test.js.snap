@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders initial state without crashing 1`] = `
+<div
+  className="TodoList ph3 mv4"
+>
+  <TodoForm
+    input=""
+    onChange={[Function]}
+    onSubmit={[Function]}
+  />
+</div>
+`;
